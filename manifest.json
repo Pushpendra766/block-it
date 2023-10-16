@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Ad Replacer",
+  "version": "1.0",
+  "description": "Replace ads with custom content",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["facts.txt"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
